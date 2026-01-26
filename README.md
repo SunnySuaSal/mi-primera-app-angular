@@ -57,3 +57,9 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+Recuerda hacer un repo por proyecto de angular en el curso.
+Existen los monorepos, pero son más avanzados, requieren otras herramientas para su gestión
+y se usan generalmente en contextos de Start Ups que desarrollan un producto.
+
+Tú estás aprendiendo, así que mantenlo en un repo por proyecto.
