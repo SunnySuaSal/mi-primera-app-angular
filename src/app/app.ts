@@ -9,8 +9,14 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
 
-  public title: WritableSignal<string> = signal<string>("Helou usando signals");
+ // public username: WritableSignal<string> = signal<string>("John Doe");
+ // es lo mismo que
+ // username = signal("John Doe");
+ // Simplemente una es más corta que la otra por inferencia del traductor.
+  username = signal("John Doe");
 
-  public titulo: string = "Hellou mundo remasterizado";
+  counter = signal(0);
+  //Que en version larga seria
+  //public counter: WritableSignal<number> = signal<number>(0);
 
 }
