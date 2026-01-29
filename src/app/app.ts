@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, WritableSignal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -8,5 +8,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('mi-primera-app');
+
+  public title: WritableSignal<string> = signal<string>("Helou usando signals");
+
+  public titulo: string = "Hellou mundo remasterizado";
+
 }
