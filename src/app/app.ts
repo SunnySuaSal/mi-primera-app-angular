@@ -19,4 +19,20 @@ export class App {
   //Que en version larga seria
   //public counter: WritableSignal<number> = signal<number>(0);
 
+  increment(): void {
+    //podriamos usar
+    //this.counter.set(this.counter() + 1);
+    //pero como estamos actualizando mas que definiendo es mas adecuado usar
+    this.counter.update(current => current + 1);
+  }
+
+  //podemos probar primero llamando el metodo
+  //desde el constructor de la clase:
+  constructor(){
+    this.increment();
+    this.increment();
+    this.increment();
+    this.increment();
+  }
+
 }
