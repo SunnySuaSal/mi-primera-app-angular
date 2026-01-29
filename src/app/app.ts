@@ -26,5 +26,9 @@ export class App {
     this.counter.update(current => current + 1);
   }
 
+  decrement(): void {
+    this.counter.update(current => current - 1);
+  }
+
 
 }
