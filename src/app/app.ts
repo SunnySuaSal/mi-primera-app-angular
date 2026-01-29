@@ -26,13 +26,5 @@ export class App {
     this.counter.update(current => current + 1);
   }
 
-  //podemos probar primero llamando el metodo
-  //desde el constructor de la clase:
-  constructor(){
-    this.increment();
-    this.increment();
-    this.increment();
-    this.increment();
-  }
 
 }
