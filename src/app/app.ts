@@ -30,5 +30,10 @@ export class App {
     this.counter.update(current => current - 1);
   }
 
+  reset(): void {
+    //como vamos a asignar un valor, aqui si conviene usar set
+    this.counter.set(0);
+  }
+
 
 }
