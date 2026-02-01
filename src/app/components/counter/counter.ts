@@ -28,8 +28,8 @@ export class Counter {
     this.counter.set(0);
   }
 
-  saveNumber(): void {
-    this.savedNumbers.update(current => [...this.savedNumbers(), this.counter()]);
+  saveNumber(num: number): void {
+    this.savedNumbers.update(current => [...this.savedNumbers(), num]);
     console.log(this.savedNumbers());
   }
 
