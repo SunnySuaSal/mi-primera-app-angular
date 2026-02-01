@@ -16,25 +16,5 @@ export class App {
  // Simplemente una es más corta que la otra por inferencia del traductor.
   username = signal("John Doe");
 
-  counter = signal(0);
-  //Que en version larga seria
-  //public counter: WritableSignal<number> = signal<number>(0);
-
-  increment(): void {
-    //podriamos usar
-    //this.counter.set(this.counter() + 1);
-    //pero como estamos actualizando mas que definiendo es mas adecuado usar
-    this.counter.update(current => current + 1);
-  }
-
-  decrement(): void {
-    this.counter.update(current => current - 1);
-  }
-
-  reset(): void {
-    //como vamos a asignar un valor, aqui si conviene usar set
-    this.counter.set(0);
-  }
-
 
 }
