@@ -1,9 +1,11 @@
 <div class="container">
+  @for(country of countries(); track country.name){
   <div class="card">
-    <img src="{{country().flag}}" alt="{{country().name}}">
-    <h2>{{country().name}}</h2>
-    <p>Capital: {{country().capital}}</p>
-    <p>Population: {{country().population}}</p>
-    <p>Refion: {{country().region}}</p>
+    <img src="{{country.flag}}" alt="{{country.name}}">
+    <h2>{{country.name}}</h2>
+    <p>Capital: {{country.capital}}</p>
+    <p>Population: {{country.population}}</p>
+    <p>Refion: {{country.region}}</p>
   </div>
+  }
 </div>
