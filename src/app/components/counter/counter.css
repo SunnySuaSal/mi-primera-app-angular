@@ -12,3 +12,11 @@ h1 {
 button{
   margin-right: 8px;
 }
+
+.alert{
+  color: red;
+}
+
+.success{
+  color: green;
+}
