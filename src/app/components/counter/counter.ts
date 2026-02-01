@@ -10,6 +10,7 @@ export class Counter {
   counter = signal(0);
   //Que en version larga seria
   //public counter: WritableSignal<number> = signal<number>(0);
+  savedNumbers = signal<number[]>([]);//Una signal de tipo arreglo de numeros con la lista vacia como default
 
   increment(): void {
     //podriamos usar
@@ -27,5 +28,9 @@ export class Counter {
     this.counter.set(0);
   }
 
+  saveNumber(): void {
+    this.savedNumbers.update(current => [...this.savedNumbers(), this.counter()]);
+    console.log(this.savedNumbers());
+  }
 
 }
