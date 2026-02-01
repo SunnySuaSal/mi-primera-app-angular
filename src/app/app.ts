@@ -1,10 +1,12 @@
 import { Component, signal, WritableSignal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Counter } from './components/counter/counter';
+import { Header } from './components/header/header';
+import { Content } from './components/content/content';
+import { Footer } from './components/footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Counter], //Aqui agregas las clases (comienzan con mayuscula) de los componentes que quieres importar
+  imports: [RouterOutlet, Header, Content, Footer], //Aqui agregas las clases (comienzan con mayuscula) de los componentes que quieres importar
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
