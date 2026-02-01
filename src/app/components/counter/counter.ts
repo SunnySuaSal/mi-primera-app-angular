@@ -26,8 +26,10 @@ export class Counter {
   reset(): void {
     //como vamos a asignar un valor, aqui si conviene usar set
     this.counter.set(0);
+    this.savedNumbers.set([]);
   }
 
+  //al parametro num, puedes poner = 0 para asignarle 0 como valor default
   saveNumber(num: number): void {
     this.savedNumbers.update(current => [...this.savedNumbers(), num]);
     console.log(this.savedNumbers());

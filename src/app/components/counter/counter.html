@@ -22,4 +22,18 @@
     <p>El contador es igual a 5</p>
     }
 
+    <!-- Para recorrer elementos en listas y utilizar su contenido para renderizar componentes, -->
+    <!-- se utilizaba *ngFor por ejemplo: -->
+    <!--
+    <ol>
+<li *ngFor="let number of savedNumbers()">Numero: {{number}}</li>
+    </ol>
+    -->
+    <!-- Ahora está deprecado, lo que se usa es un for normal de TypeScript -->
+    <ol>
+      @for(num of savedNumbers(); track $index){
+      <li>Numero: {{num}}</li>
+      }
+    </ol>
+
 </section>
