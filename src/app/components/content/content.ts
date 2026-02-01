@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, signal, WritableSignal } from '@angular/core';
+import { Country } from '../../interfaces/country.interface';
 
 @Component({
   selector: 'app-content',
@@ -7,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './content.css',
 })
 export class Content {
-
+  public country = signal<Country>({
+    name: 'Argentina',
+    capital: 'Buenos Aires',
+    region: 'Americas',
+    population: 45000000,
+    flag: 'https://flagcdn.com/w320/ar.png'
+  })
 }
