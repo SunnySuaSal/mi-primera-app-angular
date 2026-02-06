@@ -1,9 +1,10 @@
 import { Component, signal, WritableSignal } from '@angular/core';
 import { Country } from '../../interfaces/country.interface';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-content',
-  imports: [],
+  imports: [NgClass],
   templateUrl: './content.html',
   styleUrl: './content.css',
 })

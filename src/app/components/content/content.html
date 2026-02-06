@@ -4,8 +4,8 @@
     <img [src]="country.flag" [alt]="country.name">
     <h2>{{country.name}}</h2>
     <p>Capital: {{country.capital}}</p>
-    <p>Population: {{country.population}}</p>
-    <p>Refion: {{country.region}}</p>
+    <p [ngClass] = "{'highlight' : country.population > 30000000 && country.region === 'Europe'}">Population: {{country.population}}</p>
+    <p>Region: {{country.region}}</p>
   </div>
   }
 </div>
