@@ -1,1 +1,8 @@
-<p>country-card works!</p>
+  <div class="card">
+    <img [src]="country().flag" [alt]="country().name">
+    <h2>{{country().name}}</h2>
+    <p>Capital: {{country().capital}}</p>
+    <p [class.highlight]="country().population > 30000000 && country().region === 'Europe'">
+    Population: {{country().population}}</p>
+    <p>Region: {{country().region}}</p>
+  </div>

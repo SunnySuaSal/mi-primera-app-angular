@@ -6,7 +6,7 @@ import { Footer } from './components/footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Content, Footer], //Aqui agregas las clases (comienzan con mayuscula) de los componentes que quieres importar
+  imports: [Header, Content, Footer], //Aqui agregas las clases (comienzan con mayuscula) de los componentes que quieres importar
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

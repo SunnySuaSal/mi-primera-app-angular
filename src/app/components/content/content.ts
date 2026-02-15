@@ -1,15 +1,15 @@
 import { Component, signal, WritableSignal } from '@angular/core';
-import { Country } from '../../interfaces/country.interface';
-import { NgClass } from '@angular/common';
+import { CountryCard } from '../country-card/country-card';
+import { Country } from '../../interfaces/country.interface'
 
 @Component({
   selector: 'app-content',
-  imports: [NgClass],
+  imports: [CountryCard],
   templateUrl: './content.html',
   styleUrl: './content.css',
 })
 export class Content {
-  public countries = signal<Country[]>([
+public countries = signal<Country[]>([
   {
 
     name: 'Afghanistan',
@@ -263,4 +263,5 @@ export class Content {
   }
 
 ])
+
 }
