@@ -1,0 +1,19 @@
+<form class="form">
+  <input type="text" placeholder="County Name" />
+  <input type="text" placeholder="Capital" />
+
+  <select formControlName="region">
+    @for (region of regions; track region) {
+    <option [value]="region">
+      {{region}}
+    </option>
+    }
+  </select>
+
+  <input type="number" placeholder="Population" />
+  <input type="text" placeholder="Flag URL" />
+
+  <button type="submit">
+    Add Country
+  </button>
+</form>

@@ -1,0 +1,35 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;            /* espacio entre elementos */
+  max-width: 400px;     /* que no se estire infinito */
+  margin: 2rem auto;    /* centrado horizontal */
+}
+
+.form input,
+.form select,
+.form button {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+}
+
+.form input:focus,
+.form select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.form button {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.form button:hover {
+  background-color: #1d4ed8;
+}
