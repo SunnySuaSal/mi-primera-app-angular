@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 
+import { Content } from '../../components/content/content'
+
 @Component({
   selector: 'app-home-page',
-  imports: [],
+  imports: [Content],
   templateUrl: './home-page.html',
   styleUrl: './home-page.css',
 })
