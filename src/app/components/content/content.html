@@ -1,6 +1,9 @@
+
+<app-controls (sortByName)="orderByName()" (sortByPopulation)="orderbyPopulation()"></app-controls>
+
 <div class="container">
   @for(country of countries(); track country.name){
     <app-country-card [country]="country"></app-country-card>
   }
  </div>
-<app-controls></app-controls>
+

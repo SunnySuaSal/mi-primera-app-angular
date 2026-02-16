@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 
 @Component({
   selector: 'app-controls',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './controls.css',
 })
 export class Controls {
-
+  sortByName = output<void>();
+  sortByPopulation = output<void>();
 }

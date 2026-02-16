@@ -11,19 +11,6 @@ import { Controls } from '../controls/controls';
 })
 export class Content {
 public countries = signal<Country[]>([
-  {
-
-    name: 'Afghanistan',
-
-    capital: 'Kabul',
-
-    region: 'Asia',
-
-    population: 40218234,
-
-    flag: 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg'
-
-  },
 
   {
 
@@ -261,8 +248,36 @@ public countries = signal<Country[]>([
 
     flag: 'https://flagcdn.com/us.svg'
 
+  },
+
+  {
+
+    name: 'Afghanistan',
+
+    capital: 'Kabul',
+
+    region: 'Asia',
+
+    population: 40218234,
+
+    flag: 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg'
+
   }
 
 ])
+
+  orderByName(): void {
+    this.countries.update( countries =>
+      [...countries].sort((a,b) =>
+      a.name.localeCompare(b.name))
+    );
+  }
+
+  orderbyPopulation(): void {
+    this.countries.update(
+      countries =>
+      [...countries].sort((a,b) => b.population - a.population)
+    );
+  }
 
 }
