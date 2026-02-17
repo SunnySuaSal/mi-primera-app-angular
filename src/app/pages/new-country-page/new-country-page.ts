@@ -27,17 +27,21 @@ export class NewCountryPage {
 
   submit(): void {
     console.log("Formulario activado");
+
+    const { name, capital, region, population, flag } = this.form.value; //a esto se le llama destructuracion de objetos
     if(this.form.valid){
       console.log("Formulario valido");
 
       //creacion del elemento
       const newCountry : Country = {
-        name: this.form.value.name,
-        capital: this.form.value.capital,
-        region: this.form.value.region,
-        population: this.form.value.population,
-        flag: this.form.value.flag
+        name,
+        capital,
+        region,
+        population,
+        flag
       }
+
+      console.log("Agregando nuevo elemento...", newCountry);
     }
   }
 
