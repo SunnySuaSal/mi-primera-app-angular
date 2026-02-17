@@ -1,6 +1,6 @@
-<form class="form">
-  <input type="text" placeholder="County Name" />
-  <input type="text" placeholder="Capital" />
+<form class="form" [formGroup]="form" (ngSubmit)="submit()">
+  <input type="text" placeholder="County Name" formControlName="name"/>
+  <input type="text" placeholder="Capital" formControlName="capital"/>
 
   <select formControlName="region">
     @for (region of regions; track region) {
@@ -10,8 +10,8 @@
     }
   </select>
 
-  <input type="number" placeholder="Population" />
-  <input type="text" placeholder="Flag URL" />
+  <input type="number" placeholder="Population" formControlName="population"/>
+  <input type="text" placeholder="Flag URL" formControlName="flag"/>
 
   <button type="submit">
     Add Country
