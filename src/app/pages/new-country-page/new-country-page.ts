@@ -31,7 +31,13 @@ export class NewCountryPage {
       console.log("Formulario valido");
 
       //creacion del elemento
-
+      const newCountry : Country = {
+        name: this.form.value.name,
+        capital: this.form.value.capital,
+        region: this.form.value.region,
+        population: this.form.value.population,
+        flag: this.form.value.flag
+      }
     }
   }
 
