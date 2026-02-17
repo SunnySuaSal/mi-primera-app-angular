@@ -16,4 +16,9 @@
   <button type="submit">
     Add Country
   </button>
+  @if(!form.valid && form.touched){
+  <div class="alert">
+    Datos incompletos
+  </div>
+  }
 </form>
