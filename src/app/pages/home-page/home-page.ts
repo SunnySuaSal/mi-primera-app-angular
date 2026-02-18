@@ -14,20 +14,22 @@ export class HomePage {
 
   countryService = inject(CountryService);
 
-  public countries = signal<Country[]>([]);
+  public countries = this.countryService.countries;
 
+  //Ahorita no funcionan porque no hay metodo para modificar el countries
   orderByName(): void {
-    this.countries.update( countries =>
-      [...countries].sort((a,b) =>
-      a.name.localeCompare(b.name))
-    );
+    //this.countries.update( countries =>
+      //[...countries].sort((a,b) =>
+      //a.name.localeCompare(b.name))
+    //);
   }
 
   orderbyPopulation(): void {
-    this.countries.update(
-      countries =>
-      [...countries].sort((a,b) => b.population - a.population)
-    );
+    //this.countries.update(
+      //countries =>
+      //[...countries].sort((a,b) => b.population - a.population)
+    //);
   }
+
 
 }
