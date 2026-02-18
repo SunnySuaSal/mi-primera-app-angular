@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CountryService } from '../../services/country-service';
 
 @Component({
   selector: 'app-about-page',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './about-page.css',
 })
 export class AboutPage {
+
+  constructor(private countryService : CountryService){
+    console.log(this.countryService.title());
+  }
 
 }
