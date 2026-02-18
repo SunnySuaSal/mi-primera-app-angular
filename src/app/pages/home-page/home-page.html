@@ -3,7 +3,8 @@
 <app-controls (sortByName)="orderByName()" (sortByPopulation)="orderbyPopulation()"></app-controls>
 
 <div class="container">
-  @for(country of countries(); track country.name){
+  @for(country of countryService.countries(); track country.name){
+    <!-- Aunque no es buena practica llamar servicios directamente en el html -->
     <app-country-card [country]="country"></app-country-card>
   }
  </div>
