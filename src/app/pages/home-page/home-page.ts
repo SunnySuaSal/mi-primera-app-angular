@@ -16,20 +16,13 @@ export class HomePage {
 
   public countries = this.countryService.countries;
 
-  //Ahorita no funcionan porque no hay metodo para modificar el countries
   orderByName(): void {
-    //this.countries.update( countries =>
-      //[...countries].sort((a,b) =>
-      //a.name.localeCompare(b.name))
-    //);
+    console.log("Evento en el padre");
+    this.countryService.orderByName();
   }
 
-  orderbyPopulation(): void {
-    //this.countries.update(
-      //countries =>
-      //[...countries].sort((a,b) => b.population - a.population)
-    //);
+  orderByPopulation(): void {
+    this.countryService.orderByPopulation();
   }
-
 
 }

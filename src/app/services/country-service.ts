@@ -264,4 +264,18 @@ export class CountryService {
 
   public countries = this._countries.asReadonly(); //Para leer
 
+  public orderByName(): void {
+    this._countries.update( countries =>
+      [...countries].sort((a,b) =>
+      a.name.localeCompare(b.name))
+    );
+  }
+
+  public orderByPopulation(): void {
+    this._countries.update(
+      countries =>
+      [...countries].sort((a,b) => b.population - a.population)
+    );
+  }
+
 }
