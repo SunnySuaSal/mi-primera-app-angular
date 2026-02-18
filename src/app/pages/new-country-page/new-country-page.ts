@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Country } from '../../interfaces/country.interface';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
+import { CountryService } from '../../services/country-service';
 
 @Component({
   selector: 'app-new-country-page',
@@ -9,6 +10,9 @@ import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angula
   styleUrl: './new-country-page.css',
 })
 export class NewCountryPage {
+
+  countryService = inject(CountryService);
+
   regions: Country['region'][] = [
     'Americas',
     'Europe',
@@ -42,6 +46,8 @@ export class NewCountryPage {
       }
 
       console.log("Agregando nuevo elemento...", newCountry);
+      this.countryService.addCountry(newCountry);
+      this.form.reset();
     }
   }
 

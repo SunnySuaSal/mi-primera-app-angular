@@ -278,4 +278,12 @@ export class CountryService {
     );
   }
 
+  public addCountry(country : Country):void {
+    this._countries.update(
+      countries => [
+        ...countries, country
+      ]
+    );
+  }
+
 }
